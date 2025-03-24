@@ -1,0 +1,138 @@
+.about {
+  padding: 5rem 2rem;
+  background-color: #f8f8f8;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #0a192f;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background-color: #61dafb;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-content {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.profile-image-wrapper {
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.image-placeholder {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #666;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(145deg, #61dafb33, #0a192f44);
+  border: 1px dashed #61dafb;
+  text-align: center;
+  padding: 20px;
+}
+
+.image-placeholder span {
+  font-weight: bold;
+  color: #0a192f;
+  margin-bottom: 10px;
+}
+
+.image-placeholder p {
+  font-size: 0.9rem;
+  max-width: 80%;
+  margin-top: 10px;
+}
+
+.about-text {
+  flex: 1.5;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.about-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+}
+
+.detail strong {
+  margin-right: 0.5rem;
+  color: #0a192f;
+}
+
+.detail span {
+  color: #555;
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .about-image, .about-text {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 4rem 1.5rem;
+  }
+  
+  .about-details {
+    grid-template-columns: 1fr;
+  }
+} 
